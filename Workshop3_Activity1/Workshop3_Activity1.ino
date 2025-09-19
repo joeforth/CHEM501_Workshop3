@@ -12,12 +12,12 @@ void setup() {
 }
 
 void loop() {
+  // If prompted, collect some data
   if (Serial.available()) {
     // Read the string from the computer to find number of readings to take
     String numberofReadingsString = Serial.readStringUntil('\n');
     int numberofReadings = numberofReadingsString.toInt();
 
-      // If prompted, collect some data
     unsigned long dataTime = 0;
     unsigned long startTime = millis();
 
